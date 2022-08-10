@@ -9,4 +9,5 @@ Implemented it with some add-ons & updated design.
 | 01  | [JS Drum Kit](https://github.com/architkakkar/Javascript30/tree/main/01%20-%20JS%20Drum%20Kit)                                                      | [Live Demo](https://architkakkar.github.io/Javascript30/01%20-%20JS%20Drum%20Kit/)                    |
 | 02  | [JS & CSS Clock](https://github.com/architkakkar/Javascript30/tree/main/02%20-%20JS%20%26%20CSS%20Clock)                                            | [Live Demo](https://architkakkar.github.io/Javascript30/02%20-%20JS%20%26%20CSS%20Clock/)             |
 
-<img scr="https://javascript30.com/images/JS3-social-share.png" alt="">
+
+<img src="https://github.com/architkakkar/Javascript30/blob/main/course-image.png" alt="course-img">
