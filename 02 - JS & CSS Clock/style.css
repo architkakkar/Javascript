@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+
+html {
+  background: #4a555eed
+    url(https://images.pexels.com/photos/1254736/pexels-photo-1254736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-size: cover;
+  font-family: "helvetica neue";
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.digital-clock {
+  font-family: "Orbitron", sans-serif;
+  font-size: 5rem;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.3px);
+  -webkit-backdrop-filter: blur(2.3px);
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  min-width: 300px;
+}
+
+.digital-clock > div {
+  min-width: 83.5px;
+}
+
+.analog-clock {
+  width: 30rem;
+  height: 30rem;
+  border: 20px solid white;
+  border-radius: 50%;
+  margin: 40px auto 10px;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  z-index: 1;
+}
+
+.center-circle {
+  width: 2rem;
+  height: 2rem;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10px, -7.5px);
+}
+
+.hour-hand {
+  width: 35%;
+  left: 15%;
+  height: 7px;
+}
+
+.minute-hand {
+  z-index: 2;
+}
+
+.second-hand {
+  z-index: 3;
+  height: 4px;
+  width: 60%;
+  transform-origin: 83%;
+}
+
+@media (max-width: 450px) {
+  .digital-clock {
+    font-size: 4rem;
+    padding: 2.5px 5px;
+    min-width: 250px;
+  }
+
+  .digital-clock > div {
+    min-width: 70px;
+  }
+
+  .analog-clock {
+    width: 25rem;
+    height: 25rem;
+    border: 15px solid white;
+  }
+}
+
+@media (max-width: 350px) {
+  .digital-clock {
+    padding: 2.5px;
+    min-width: 250px;
+  }
+
+  .analog-clock {
+    width: 20rem;
+    height: 20rem;
+    border: 15px solid white;
+  }
+}
