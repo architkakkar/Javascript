@@ -25,7 +25,7 @@ body {
   gap: 25px;
   overflow: hidden;
   min-height: 80vh;
-  width: 90vw;
+  width: 92.5vw;
   padding: 5px;
 }
 
@@ -38,16 +38,15 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 5px black;
-  border-radius: 1rem;
+  border-radius: 3rem;
   text-align: center;
   font-size: 20px;
   cursor: pointer;
   /* Safari transitionend event.propertyName === flex */
   /* Chrome + FF transitionend event.propertyName === flex-grow */
   transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
-              flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), 
-              background 0.2s;
-    
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s,
+    border-radius 700ms ease-in-out;
 }
 
 .panel1 {
@@ -71,7 +70,7 @@ body {
 }
 
 /* Flex Children */
-.panel>* {
+.panel > * {
   flex: 1 0 auto;
   display: flex;
   align-items: center;
@@ -83,47 +82,67 @@ body {
 
 .panel p {
   font-family: "Amatic SC", cursive;
-  font-size: 2em;
+  font-size: 1.5em;
   text-transform: uppercase;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
 }
 
 .panel p:nth-child(2) {
-  font-size: 4em;
+  font-size: 3em;
 }
 
 .panel.open {
   font-size: 30px;
   flex: 5;
+  border-radius: 1.5rem;
 }
 
-.panel>*:first-child {
+.panel > *:first-child {
   transform: translateY(-110%);
 }
 
-.panel>*:last-child {
+.panel > *:last-child {
   transform: translateY(110%);
 }
 
-.panel.open-active>*:first-child,
-.panel.open-active>*:last-child {
+.panel.open-active > *:first-child,
+.panel.open-active > *:last-child {
   transform: translateY(0%);
+}
+
+@media (max-width: 992px) {
+  .panel p {
+    font-size: 1.1em;
+  }
+
+  .panel p:nth-child(2) {
+    font-size: 2.25em;
+  }
+
+  .panels {
+    gap: 20px;
+  }
 }
 
 @media (max-width: 768px) {
   .panel p {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 
   .panel p:nth-child(2) {
-    font-size: 3em;
+    font-size: 2em;
   }
 }
 
 @media (max-width: 580px) {
+  .panel3,
+  .panel5 {
+    display: none;
+  }
+}
 
-  .panel2,
-  .panel3 {
+@media (max-width: 400px) {
+  .panel4 {
     display: none;
   }
 }
